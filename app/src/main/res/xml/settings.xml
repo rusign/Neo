@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical">
+
+    <EditTextPreference
+        android:title="Edit Text"
+        android:key="user_name"
+        android:summary="set ur name"/>
+    <SwitchPreference
+        android:title="SwitchF"
+        android:key="switchF"
+        android:summary="false"
+        />
+    <SwitchPreference
+        android:title="Switch"
+        android:key="switchT"
+        android:summary="true"
+        />
+    <ListPreference
+        android:title="List"
+        android:key="list"
+        android:summary="list sum"
+        android:entries="@array/lists"
+        android:entryValues="@array/lists"
+        />
+
+</PreferenceScreen>

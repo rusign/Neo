@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.mindorks.framework.mvvm.ui.contacts.contact.ContactActivity">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.mindorks.framework.mvvm.ui.contacts.contact.ContactViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff8f8f8">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="290dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:orientation="vertical"
+                android:background="@drawable/gradientbackground"
+                android:layout_marginBottom="0.00dp"
+                android:layout_marginTop="0.0dp">
+                <!--<ImageView-->
+                    <!--android:src="@drawable/ic_delete2"-->
+                    <!--android:layout_width="55.0dp"-->
+                    <!--android:layout_height="46.0dp"-->
+                    <!--android:id="@+id/imageView1"-->
+                    <!--android:layout_gravity="right"-->
+                    <!--android:adjustViewBounds="true"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_marginTop="4.0dp"-->
+                    <!--local:MvxBind="Click DeleteCommand" />-->
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/image_view_contact_display"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="30.5dp"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/facebook_avatar"/>
+                <TextView
+                    android:id="@+id/name_contact_id"
+                    android:layout_marginTop="6.0dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jackie Maurice"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:textSize="21sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/image_view_contact_display" />
+            </RelativeLayout>
+            <android.support.v7.widget.CardView
+                android:layout_width="270dp"
+                android:layout_height="60dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="220.0dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Photos"
+                            android:textSize="15sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="35"
+                            android:textStyle="bold"
+                            android:textSize="15sp"
+                            android:paddingTop="10dp"
+                            android:textColor="#61adc9" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Videos"
+                            android:textSize="15sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4"
+                            android:textStyle="bold"
+                            android:textSize="15sp"
+                            android:paddingTop="10dp"
+                            android:textColor="#61adc9" />
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_marginTop="1dp">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:paddingLeft="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/ic_email" />
+                <TextView
+                    android:id="@+id/email_contact_id"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:text="jackie.maurice@bernard.fr"
+                     />
+            </LinearLayout>
+        </LinearLayout>
+        <Button
+            android:textColor="#fff"
+            android:background="@drawable/boutonstyle"
+            android:layout_marginTop="35dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="161.7dp"
+            android:layout_height="wrap_content"
+            android:text="Appeler" />
+    </LinearLayout>
+</layout>

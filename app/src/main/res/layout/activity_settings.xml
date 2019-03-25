@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.mindorks.framework.mvvm.ui.settings.SettingsActivity"
+    >
+
+<data>
+
+    <import type="android.view.View" />
+
+    <variable
+        name="viewModel"
+        type="com.mindorks.framework.mvvm.ui.settings.SettingsViewModel" />
+
+</data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/activityMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--<android.support.design.widget.AppBarLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:id="@+id/appbar_settings_id"-->
+                <!--app:elevation="5dp">-->
+
+                <!--<android.support.v7.widget.Toolbar-->
+                    <!--android:id="@+id/toolbar"-->
+                    <!--style="@style/Toolbar"-->
+                    <!--app:subtitleTextColor="@color/white"-->
+                    <!--app:title="Paramètres"-->
+                    <!--app:titleTextAppearance="@style/Toolbar.TitleText"-->
+                    <!--app:titleTextColor="@color/white" />-->
+
+                <!--<View-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="1dp"-->
+                    <!--android:background="@color/light_gray" />-->
+
+            <!--</android.support.design.widget.AppBarLayout>-->
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/relative_settings"
+            android:orientation="vertical"
+            >
+
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

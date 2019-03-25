@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    >
+
+<data>
+
+   <variable
+       name="viewModel"
+       type="com.mindorks.framework.mvvm.ui.chatlist.ChatlistViewModel" />
+</data>
+
+   <LinearLayout
+       android:id="@+id/main_content"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+       android:padding="20dp"
+       android:background="#fcfcfc"
+       android:gravity="center"
+       >
+      <TextView
+          android:text="CONVERSATION"
+          android:textAppearance="?android:attr/textAppearanceMedium"
+          android:layout_width="match_parent"
+          android:layout_height="30.0dp"
+          android:id="@+id/textView1"
+          android:textColor="#ff5fadcd"
+          android:textStyle="bold"
+          android:layout_marginLeft="27.5dp"
+          android:layout_marginTop="0.0dp" />
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="#5fadcd"
+          android:layout_marginLeft="10px"
+          android:layout_marginRight="10px" />
+      <RelativeLayout
+          android:orientation="vertical"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+         <android.support.design.widget.FloatingActionButton
+             android:id="@+id/myFAB"
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:src="@drawable/ic_add_white_24px"
+             android:layout_alignParentRight="true"
+             android:layout_alignParentBottom="true"
+             android:layout_marginRight="24.7dp"
+             android:layout_marginBottom="40.7dp"
+             android:scaleX="1.1"
+             android:scaleY="1.1"
+             android:onClick="@{() -> viewModel.onAddConvClick()}"
+             />
+         <android.support.v7.widget.RecyclerView
+             android:id="@+id/chatlist_recyclerview_id"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_marginTop="10dp"
+             android:scrollbars="vertical"
+             app:adapter="@{viewModel.chatlistObservableArrayList}"
+             tools:listitem="@layout/item_chatlist_view">
+         </android.support.v7.widget.RecyclerView>
+      </RelativeLayout>
+   </LinearLayout>
+</layout>

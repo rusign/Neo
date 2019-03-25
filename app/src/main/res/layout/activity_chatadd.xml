@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.mindorks.framework.mvvm.ui.chat.chatadd.ChatAddActivity">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.mindorks.framework.mvvm.ui.chat.chatadd.ChatAddViewModel" />
+
+    </data>
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Ajoutez un utilisateur"
+                android:textColor="@color/colorPrimary" />
+
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/usersId"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_dropdown" />
+        </LinearLayout>
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_login"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="80dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/button_connexion"
+            android:padding="12dp"
+            android:text="Ajouter"
+            android:onClick="@{() -> viewModel.onServerLoginClick()}"
+            android:textAlignment="center"
+            android:textColor="#ffffffff"
+            local:layout_constraintBottom_toBottomOf="parent"
+            local:layout_constraintEnd_toEndOf="parent"
+            local:layout_constraintHorizontal_bias="0.0"
+            local:layout_constraintStart_toStartOf="parent"
+            local:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

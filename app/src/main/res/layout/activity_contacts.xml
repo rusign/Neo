@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.mindorks.framework.mvvm.ui.contacts.ContactsActivity">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.mindorks.framework.mvvm.ui.contacts.ContactsViewModel" />
+
+    </data>
+    <LinearLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:background="#fcfcfc"
+        android:gravity="center">
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="268dp"
+                android:layout_height="30.0dp"
+                android:layout_alignBottom="@+id/imgbut"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="17dp"
+                android:text="CERCLES"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#ff5fadcd"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/imgbut"
+
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center"
+                android:layout_marginEnd="19dp"
+                android:layout_marginHorizontal="10dp"
+                android:background="@drawable/ic_invitation"
+                android:onClick="@{() -> viewModel.onInviteCircleClick()}"
+                android:padding="20dp"
+                android:scaleType="fitCenter" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/imgbut"
+                android:background="#5fadcd" />
+        </RelativeLayout>
+        <RelativeLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/myFAB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_add_white_24px"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="24.7dp"
+                    android:layout_marginBottom="40.7dp"
+                    android:scaleX="1.1"
+                    android:scaleY="1.1"
+                    android:onClick="@{() -> viewModel.onAddCircleClick()}"
+                    />
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerview_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

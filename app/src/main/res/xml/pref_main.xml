@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Compte">
+        <EditTextPreference
+            android:defaultValue="Qs"
+            android:key="key_lname"
+            android:summary="Votre nom"
+            android:title="Nom" />
+
+        <EditTextPreference
+            android:defaultValue="qs"
+            android:key="key_fname"
+            android:summary="Votre prénom"
+            android:title="Prénom" />
+
+        <EditTextPreference
+            android:defaultValue="qs@qs.qas"
+            android:key="key_mail"
+            android:summary="Votre adresse mail"
+            android:title="Email" />
+
+        <EditTextPreference
+            android:key="password_key"
+            android:title="Changer le mot de passe"
+            android:inputType="textPassword"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/pref_title_notifications">
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/notifications_new_message"
+            android:summary="Activer la notification des message"
+            android:title="Message de notification" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/key_vibrate"
+            android:summary="Activer le vibreur"
+            android:title="Vibreur" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Déconnexion">
+        <Preference
+            android:key="decoButton"
+            android:title="Se déconnecter" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="désinscription">
+        <Preference
+            android:key="desisButton"
+            android:title="Se désinscrire" />
+    </PreferenceCategory>
+</PreferenceScreen>
